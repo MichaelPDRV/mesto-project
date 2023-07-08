@@ -1,0 +1,27 @@
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 282px);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
+  column-gap: 17px;
+  max-width: 880px;
+  justify-content: center;
+}
+
+@media (max-width: 320px) {
+  .grid-items {
+    min-width: 282px;
+  }
+}
+
+@media (min-width: 397px) and (max-width: 500px) {
+  .page__grid-items {
+    grid-template-columns: 350px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 650px) {
+  .page__grid-items {
+    grid-template-columns: 410px;
+  }
+}

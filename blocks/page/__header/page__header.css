@@ -1,0 +1,17 @@
+.page__header {
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 320px) {
+  .page__header {
+    margin-bottom: 42px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 963px) {
+  .page__header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

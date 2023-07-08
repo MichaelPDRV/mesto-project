@@ -1,0 +1,14 @@
+.grid-items__subtitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 15px 0 21px;
+  max-width: 246px;
+  margin: 0;
+}
+
+@media (min-width: 321px) and (max-width: 919px) {
+  .grid-items__subtitle {
+    min-width: 246px;
+    max-width: 374px;
+  }
+}

@@ -1,0 +1,29 @@
+.popup__heading {
+  max-width: 330px;
+  color: black;
+  font-weight: 900;
+  font-size: 24px;
+  box-sizing: border-box;
+  line-height: 30px;
+  margin: 34px 64px 44px 36px;
+  width: 100%;
+}
+
+@media (max-width: 320px) {
+  .popup__heading {
+    max-width: 238px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 650px) {
+  .popup__heading {
+    width: 80%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 650px) {
+  .popup__heading {
+    margin: 25px auto 75px auto;
+    font-size: 18px;
+  }
+}

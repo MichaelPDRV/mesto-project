@@ -1,0 +1,7 @@
+.grid-items__item {
+  display: grid;
+  grid-template-rows: min-content 79px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+}
