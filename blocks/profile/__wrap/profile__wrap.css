@@ -6,6 +6,7 @@
 @media (max-width: 320px)  {
   .profile__wrap {
     justify-content: center;
+    margin: -4px 1px -6px 5px;
   }
 }
 
