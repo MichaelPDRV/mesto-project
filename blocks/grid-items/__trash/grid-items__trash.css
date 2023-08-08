@@ -1,9 +1,8 @@
-.grid-items__heart {
-  width: 22px;
+.grid-items__trash {
+  width: 18px;
   height: 19px;
-  margin: 5px 5px 0 0;
   cursor: pointer;
-  background-image: url(../../../images/heart.svg);
+  background-image: url(../../../images/trash.svg);
   background-repeat: no-repeat;
   background-position: 0px 0px;
   background-size: cover;
@@ -11,8 +10,11 @@
   border: none;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-.grid-items__heart:hover {
+.grid-items__trash:hover {
   opacity: 0.5;
 }

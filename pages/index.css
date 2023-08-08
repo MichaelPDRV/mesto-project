@@ -23,6 +23,9 @@
 @import url("../blocks/grid-items/__subtitle/grid-items__subtitle.css");
 @import url("../blocks/grid-items/__place-name/grid-items__place-name.css");
 @import url("../blocks/grid-items/__heart/grid-items__heart.css");
+@import url("../blocks/grid-items/__heart/_type/grid-items__heart_type_active.css");
+@import url("../blocks/grid-items/__trash/grid-items__trash.css");
+
 
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__text/footer__text.css");
@@ -34,3 +37,8 @@
 @import url("../blocks/popup/__button/popup__button.css");
 @import url("../blocks/popup/__input/popup__input.css");
 @import url("../blocks/popup/__close-button/popup__close-button.css");
+@import url("../blocks/popup/__grid-items/popup__grid-items.css");
+@import url("../blocks/popup/__img/popup__img.css");
+@import url("../blocks/popup/__description/popup__description.css");
+
+

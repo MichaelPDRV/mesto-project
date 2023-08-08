@@ -25,6 +25,8 @@
         </div>
         <button type="button" class="profile__plus-container" name="load" value="Загрузить" aria-label="Загрузить"></button>
       </section>
+      <section class="page__grid-items grid-items"></section>
+      <!--
       <section class="page__grid-items grid-items" aria-label="Места">
         <article class="grid-items__item">
           <img class="grid-items__img" src="images/karachaevsk.jpg" alt="Карачаевск">
@@ -69,20 +71,51 @@
           </div>
         </article>
       </section>
+      -->
     </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2023. Михаил Подрезов</p>
     </footer>
-    <div class="popup">
-      <div class="popup__container">
+    <div class="popup page__names-changes">
+      <div class="popup__container page__names-container">
         <h3 class="popup__heading">Редактировать профиль</h3>
-        <form name="profile-form">
-          <input class="popup__input popup__input_type_name" type="text" name="name" id="name" placeholder="Ваше имя">
-          <input class="popup__input popup__input_type_position" type="text" name="position" id="position" placeholder="Ваш род занятий">
+        <form name="profile-form" id="popup__profile-form">
+          <input class="popup__input popup__input_type_name" type="text" id="popup__formName" placeholder="Ваше имя">
+          <input class="popup__input popup__input_type_position" type="text" id="popup__formPosition" placeholder="Ваш род деятельности">
           <button class="popup__button" type="submit" name="save-button" value="Сохранить" aria-label="Сохранить">Сохранить</button>
         </form>
         <button class="popup__close-button" type="button" name="close-button" value="Закрыть" aria-label="Закрыть форму"></button>
       </div>
     </div>
+
+    <div class="popup page__picture-changes">
+      <div class="popup__container">
+        <h3 class="popup__heading">Новое место</h3>
+        <form name="profile-form" id="popup__picture-profile-form">
+          <input class="popup__input" type="text" name="name_place" id="name__place" placeholder="Название">
+          <input class="popup__input" type="text" name="picture_link" id="picture__link" placeholder="Ссылка на картинку">
+          <button class="popup__button" id="popup__createButton" type="submit" name="create" value="Создать">Создать</button>
+        </form>
+        <button class="popup__close-button" id="popup__close-button" type="button" name="close-button" value="Закрыть"></button>
+      </div>
+    </div>
+    <div class="popup popup_zoom-image">
+      <div class="popup__grid-items">
+        <img class="popup__img" src="" alt="">
+        <div class="popup__description"></div>
+        <button class="popup__close-button popup-button_type_close" type="button" name="close-button" value="Закрыть"></button>
+      </div>
+    </div>
+    <template class="grid__template">
+      <div class="grid-items__item">
+        <img class="grid-items__img">
+        <div class="grid-items__subtitle">
+          <h2 class="grid-items__place-name"></h2>
+          <button type="button" class="grid-items__heart" name="like" value="Лайк"></button>
+          <button type="button" class="grid-items__trash" name="Trash" value="Корзина"></button>
+        </div>
+      </div>
+    </template>
+    <script src="pages/index.js"></script>
   </body>
 </html>
