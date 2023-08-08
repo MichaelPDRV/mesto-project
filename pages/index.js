@@ -1,36 +1,8 @@
-/* Первоначальная загрузка карточек */
-
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-  ];
-
 /* Объявляем константы */
 
 const cardsContainer = document.querySelector('.page__grid-items');
 const cardTemplate = document.querySelector('.grid__template').content;
+const card = cardTemplate.querySelector('.grid-items__item');
 
 const popupImg = document.querySelector('.popup__img');
 const popupImgDescription = document.querySelector('.popup__description');
@@ -57,8 +29,9 @@ const buttonClosePopupEditPicture = document.querySelector('#popup__close-button
 /* Загрузка массива карточек */
 
 initialCards.forEach(function(item) {
-  cardsContainer.append(createCard(item.name, item.link));
+  cardsContainer.append(createCard(item.name, item.link, item.pictureName));
 });
+
 
 /* Открытия попапа */
 
@@ -103,22 +76,23 @@ buttonClosePopupEditName.addEventListener('click', function() {
 
 /* Создания карточки */
 
-function createCard(name, link) {
-  const card = cardTemplate.querySelector('.grid-items__item').cloneNode(true);
-  const cardImg = card.querySelector('.grid-items__img');
-  card.querySelector('.grid-items__place-name').textContent = name;
+function createCard(name, link, pictureName) {
+  const cardCopy = card.cloneNode(true);
+  const cardImg = cardCopy.querySelector('.grid-items__img');
+  cardCopy.querySelector('.grid-items__place-name').textContent = name;
   cardImg.src = link;
+  cardImg.alt = pictureName;
 
-
-  clickOnLikeCard(card.querySelector('.grid-items__heart'));
-  deleteCard(card.querySelector('.grid-items__trash'));
+  clickOnLikeCard(cardCopy.querySelector('.grid-items__heart'));
+  deleteCard(cardCopy.querySelector('.grid-items__trash'));
 
   cardImg.addEventListener('click', function() {
     openPopup(popupZoomImgContainer);
     popupImgDescription.textContent = name;
     popupImg.src = link;
+    popupImg.alt = pictureName;
   });
-  return card;
+  return cardCopy;
 }
 
 /* Удаление карточек */
